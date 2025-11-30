@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<robot name="my_robot">
+
+  <link name="base_link"/>
+
+    <link name="link_suporte">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/base.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="black">
+            <color rgba="0.2 0.2 0.2 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="link_neck">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/neck.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="jaw_skin">
+            <color rgba="0.5 0.5 0.5 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="link_face">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/externo.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+            <material name="metal_skin">
+                <color rgba="0.65 0.65 0.65 1.0"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="link_jaw">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/jaw.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="jaw_skin">
+            <color rgba="0.5 0.5 0.5 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+
+
+
+
+
+
+
+    <link name="eye_right_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/palpebra_b.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="grey_skin">
+            <color rgba="0.65 0.65 0.65 1.0"/>
+        </material>
+        </visual>
+    </link>
+    
+    <link name="eye_right_mimic_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/palpebra_c.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="grey_skin">
+            <color rgba="0.65 0.65 0.65 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="right_eye_yaw_link"/>
+
+    <link name="right_eye_pitch_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/olho.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="white">
+            <color rgba="1 1 1 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="r_iris">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/iris.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="bbbbbbbbbbbb">
+            <color rgba="0.1 0.1 0.1 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="r_sobrancelha_up_link"/>
+
+    <link name="r_sobrancelha_roll_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/r_s.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="bbbbbbbbbbbb">
+            <color rgba="0.1 0.1 0.1 1.0"/>
+        </material>
+    </visual>
+    </link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <link name="eye_left_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/palpebra_b.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="grey_skin">
+            <color rgba="0.65 0.65 0.65 1.0"/>
+        </material>
+        </visual>
+    </link>
+    
+    <link name="eye_left_mimic_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/palpebra_c.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="grey_skin">
+            <color rgba="0.65 0.65 0.65 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="left_eye_yaw_link"/>
+
+    <link name="left_eye_pitch_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/olho.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="white">
+            <color rgba="1 1 1 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+    <link name="l_iris">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/iris.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="bbbbbbbbbbbb">
+            <color rgba="0.1 0.1 0.1 1.0"/>
+        </material>
+        </visual>
+    </link>
+
+
+    <link name="l_sobrancelha_up_link"/>
+
+    <link name="l_sobrancelha_roll_link">
+        <visual>
+        <geometry>
+            <mesh filename="package://boris_face/urdf/meshes/l_s.stl" scale="1.0 1.0 1.0"/>
+        </geometry>
+        <material name="bbbbbbbbbbbb">
+            <color rgba="0.1 0.1 0.1 1.0"/>
+        </material>
+    </visual>
+    </link>
+
+
+
+
+
+
+
+    
+
+
+
+    <joint name="fixed_face" type="fixed">
+        <parent link="base_link"/>
+        <child link="link_suporte"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="neck_yaw" type="revolute">
+        <parent link="link_suporte"/>
+        <child link="link_neck"/>
+        <origin xyz="0 0 0.62" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.65" upper="0.65"/>
+    </joint>
+
+    <joint name="neck_pitch" type="revolute">
+        <parent link="link_neck"/>
+        <child link="link_face"/>
+        <origin xyz="0 0 0.0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.4" upper="0.2"/>
+    </joint>
+
+    <joint name="jaw" type="revolute">
+        <parent link="link_face"/>
+        <child link="link_jaw"/>
+        <origin xyz="0.5 0.005 0.5" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="0.0" upper="0.3"/>
+    </joint>
+
+
+    <joint name="right_eye" type="revolute">
+        <parent link="link_face"/>
+        <child link="eye_right_link"/>
+        <origin xyz="1.04 -0.44 0.775" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.25" upper="0.68"/>
+    </joint>
+
+    <joint name="right_eye_mimic" type="revolute">
+        <parent link="link_face"/>
+        <child link="eye_right_mimic_link"/>
+        <origin xyz="1.04 -0.44 0.775" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.25" upper="0.68"/>
+        <mimic joint="right_eye" multiplier="1.3" offset="0"/>
+    </joint>
+
+    <joint name="eye_yaw" type="revolute">
+        <parent link="link_face"/>
+        <child link="right_eye_yaw_link"/>
+        <origin xyz="1.04 -0.44 0.775" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.6" upper="0.6"/>
+    </joint>
+
+    <joint name="eye_pitch" type="revolute">
+        <parent link="right_eye_yaw_link"/>
+        <child link="right_eye_pitch_link"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.5" upper=".3"/>
+    </joint>
+
+    <joint name="iris_r" type="fixed">
+        <parent link="right_eye_pitch_link"/>
+        <child link="r_iris"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="right_eyebrow_up" type="prismatic">
+        <parent link="link_face"/>
+        <child link="r_sobrancelha_up_link"/>
+        <origin xyz="0.85 -0.48 1.35" rpy="0 -0.15 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.2" upper="0.2"/>
+    </joint>
+
+    <joint name="right_eyebrow_roll" type="revolute">
+        <parent link="r_sobrancelha_up_link"/>
+        <child link="r_sobrancelha_roll_link"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.3" upper="0.7"/>
+    </joint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <joint name="left_eye" type="revolute">
+        <parent link="link_face"/>
+        <child link="eye_left_link"/>
+        <origin xyz="1.04 0.44 0.775" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.25" upper="0.68"/>
+    </joint>
+
+    <joint name="left_eye_mimic" type="revolute">
+        <parent link="link_face"/>
+        <child link="eye_left_mimic_link"/>
+        <origin xyz="1.04 0.44 0.775" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-1.57" upper="1.57"/>
+        <mimic joint="left_eye" multiplier="1.3" offset="0"/>
+    </joint>
+
+    <joint name="left_eye_yaw" type="revolute">
+        <parent link="link_face"/>
+        <child link="left_eye_yaw_link"/>
+        <origin xyz="1.04 0.44 0.775" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10.0" velocity="1.0" lower="-1.57" upper="1.57"/>
+        <mimic joint="eye_yaw" multiplier="1.0" offset="0"/>
+    </joint>
+
+    <joint name="left_eye_pitch" type="revolute">
+        <parent link="left_eye_yaw_link"/>
+        <child link="left_eye_pitch_link"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-1.57" upper="1.57"/>
+        <mimic joint="eye_pitch" multiplier="1.0" offset="0"/>
+    </joint>
+
+    <joint name="iris_l" type="fixed">
+        <parent link="left_eye_pitch_link"/>
+        <child link="l_iris"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="left_eyebrow_up" type="prismatic">
+        <parent link="link_face"/>
+        <child link="l_sobrancelha_up_link"/>
+        <origin xyz="0.85 0.48 1.35" rpy="0 -0.15 0"/>
+        <axis xyz="0 0 1"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.2" upper="0.2"/>
+    </joint>
+
+    <joint name="left_eyebrow_roll" type="revolute">
+        <parent link="l_sobrancelha_up_link"/>
+        <child link="l_sobrancelha_roll_link"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0 0 0"/>
+        <axis xyz="-1 0 0"/>
+        <limit effort="10.0" velocity="1.0" lower="-0.3" upper="0.7"/>
+    </joint>
+
+
+
+
+</robot>
