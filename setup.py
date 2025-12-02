@@ -26,6 +26,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'talk_with_me.py = boris_face.talk_with_me:main',
         ],
     },
 )
